@@ -1,4 +1,4 @@
-name: Deploy Theme
+name: Deploy Theme FLL2027
 on:
   push:
     branches:
