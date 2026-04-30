@@ -1,0 +1,64 @@
+{{#contentFor "styles"}}
+<link rel="stylesheet" href="{{asset 'css/fll/bootstrap.min.css'}}">
+<link rel="stylesheet" href="{{asset 'css/fll/animate.min.css'}}">
+<link rel="stylesheet" href="{{asset 'css/fll/fontawesome-all.min.css'}}">
+<link rel="stylesheet" href="{{asset 'css/fll/default.css'}}">
+<link rel="stylesheet" href="{{asset 'css/fll/main.css'}}">
+{{/contentFor}}
+
+<div class="evente-wrap">
+    <!-- td-hero-area-start -->
+    <div class="td-hero-area td-hero-spacing bg-position p-relative fix" style="z-index: 1;">
+        <video autoplay muted playsinline
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="{{asset 'videos/topographic.webm'}}" type="video/mp4">
+        </video>
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); z-index: -1;">
+        </div>
+        <div class="td-hero-text-shape wow td-animetion-left" data-wow-duration="1.5s" data-wow-delay="1s">
+        </div>
+        <div class="container-fluid container-1680">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="td-hero-content p-relative mb-30 pl-165">
+                        <span class="td-hero-subtitle mb-30 wow td-animetion-left" data-wow-duration="1.5s"
+                            data-wow-delay="0.1s">26 - 28 Mars 2027</span>
+                        <h2 class="td-hero-title wow td-animetion-left" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                            FIRST LEGO League<br />Festival National</h2>
+                        <p class="td-hero-location wow mb-35 td-animetion-left" data-wow-duration="1.5s"
+                            data-wow-delay="0.5s">Palais des Congrès du Futuroscope, Poitiers, France</p>
+                        <div class="td-hero-countdown mb-40 wow td-animetion-right" data-wow-duration="1.5s"
+                            data-wow-delay="0.7s">
+                            <ul class="deal-counter ml0-md" id="timer">
+                                <li class="list-inline-item days mb-20">00</li>
+                                <li class="list-inline-item hours mb-20">00</li>
+                                <li class="list-inline-item minutes mb-20">00</li>
+                                <li class="list-inline-item seconds mb-20">00</li>
+                            </ul>
+                        </div>
+                        {{!-- <div class="td-hero-subtitle wow td-animetion-top" data-wow-duration="1.5s"
+                            data-wow-delay="0.9s">
+                            {{#if
+                            @custom.header_text}}{{@custom.header_text}}{{else}}{{@site.description}}{{/if}}
+                            <br>
+                            {{> "email-subscription" email_field_id="header-email"}}
+                        </div> --}}
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-12">
+                    <div class="td-hero-thumb mb-30 p-relative">
+                        <img class="w-100" src="{{asset 'img/hero/robots.png'}}" alt="" style="transform: scaleX(-1);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- td-hero-area-end -->
+</div>
+
+{{#contentFor "scripts"}}
+<script src="{{asset 'js/vendor/jquery.js'}}"></script>
+<script src="{{asset 'js/wow.min.js'}}"></script>
+<script src="{{asset 'js/hero.js'}}"></script>
+{{/contentFor}}

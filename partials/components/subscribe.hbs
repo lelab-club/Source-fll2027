@@ -1,0 +1,33 @@
+{{#contentFor "styles"}}
+<link rel="stylesheet" href="{{asset 'css/fll/bootstrap.min.css'}}">
+<link rel="stylesheet" href="{{asset 'css/fll/fontawesome-all.min.css'}}">
+<link rel="stylesheet" href="{{asset 'css/fll/default.css'}}">
+<link rel="stylesheet" href="{{asset 'css/fll/main.css'}}">
+{{/contentFor}}
+
+<div class="evente-wrap">
+    <div class="td-cta-area">
+        <div class="col-lg-12">
+            <div class="td-cta-2-wrap bg-position" data-background="{{asset 'img/cta/cta-bg.png'}}">
+                <div class="row align-items-end">
+                    <div class="col-lg-5">
+                        <div class="td-cta-2-content mb-20">
+                            <span class="td-cta-2-subtitle d-inline-block mb-5">Ne manquez aucune
+                                information !</span>
+                            <h2 class="td-cta-2-title">Inscrivez-vous à la newsletter</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="td-cta-2-form mb-25">
+                            {{> "email-subscription" email_field_id="header-email"}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#contentFor "scripts"}}
+<script src="{{asset 'js/vendor/jquery.js'}}"></script>
+{{/contentFor}}
