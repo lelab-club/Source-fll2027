@@ -78,6 +78,15 @@
 }
 
 /*=============================
+    WOW.js - Prevent Flash of Animated Content
+    Elements are hidden by default; WOW.js reveals
+    them with animation when they enter the viewport.
+===============================*/
+.evente-wrap .wow {
+  visibility: hidden;
+}
+
+/*=============================
 	Typography css start
 ===============================*/
 .evente-wrap {
