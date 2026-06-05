@@ -417,8 +417,8 @@ body[class*=" gh-font-heading"]:not(.gh-font-heading-fira-sans):not(.gh-font-hea
 
 .gh-canvas,
 .kg-width-full.kg-content-wide {
-    --main: min(var(--content-width, 720px), 100% - var(--container-gap) * 2);
-    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --main: min(var(--content-width, 840px), 100% - var(--container-gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 840px)) / 2));
     --full: minmax(var(--container-gap), 1fr);
 
     display: grid;
