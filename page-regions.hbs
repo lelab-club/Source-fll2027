@@ -4,119 +4,134 @@
 <link rel="stylesheet" href="{{asset 'css/fll/default.css'}}">
 <link rel="stylesheet" href="{{asset 'css/fll/main.css'}}">
 <style>
-.td-organizers-wrap {
-    padding: 100px 0;
-}
-.td-organizers-title {
-    margin-bottom: 48px;
-}
-.td-organizer-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 14px 12px;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-    transition: background 0.2s;
-    border-radius: 8px;
-}
-.td-organizer-item:last-child {
-    border-bottom: none;
-}
-.td-organizer-item.highlight {
-    background: #f0f4ff;
-}
-.td-organizer-item-icon {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: #f5f5f5;
-}
-.td-organizer-item-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.td-organizer-item-text {
-    flex: 1;
-    min-width: 0;
-}
-.td-organizer-item-title {
-    font-weight: 600;
-    font-size: 1.6rem;
-    margin: 0;
-    line-height: 1.3;
-}
-.td-organizer-item-subtitle {
-    font-size: 1.3rem;
-    color: #666;
-    margin: 2px 0 0;
-    line-height: 1.3;
-}
-.td-organizer-item-link {
-    font-size: 1.3rem;
-    color: #5033ff;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 2px;
-}
-.td-organizer-item-link:hover {
-    text-decoration: underline;
-}
-.td-organizer-pin {
-    transition: all 0.2s;
-    cursor: pointer;
-}
-.td-organizer-pin.highlight {
-    fill: #5033ff;
-}
-.td-organizer-pin.highlight circle:first-child {
-    r: 8;
-    fill: #5033ff;
-}
-.td-organizer-pin.highlight circle:last-child {
-    r: 12;
-    fill: rgba(80, 51, 255, 0.15);
-}
-.td-map-svg-wrap {
-    position: relative;
-    max-width: 500px;
-    margin: 0 auto;
-    aspect-ratio: 313 / 300;
-}
-.td-map-svg-wrap svg {
-    display: block;
-}
-@media (max-width: 991px) {
-    .td-organizers-wrap .row {
-        flex-direction: column-reverse;
+    .td-organizers-wrap {
+        padding: 100px 0;
     }
+
     .td-organizers-title {
-        margin-bottom: 32px;
+        margin-bottom: 48px;
     }
-}
+
+    .td-organizer-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 12px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        transition: background 0.2s;
+        border-radius: 8px;
+    }
+
+    .td-organizer-item:last-child {
+        border-bottom: none;
+    }
+
+    .td-organizer-item.highlight {
+        background: #f0f4ff;
+    }
+
+    .td-organizer-item-icon {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #f5f5f5;
+    }
+
+    .td-organizer-item-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .td-organizer-item-text {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .td-organizer-item-title {
+        font-weight: 600;
+        font-size: 1.6rem;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .td-organizer-item-subtitle {
+        font-size: 1.3rem;
+        color: #666;
+        margin: 2px 0 0;
+        line-height: 1.3;
+    }
+
+    .td-organizer-item-link {
+        font-size: 1.3rem;
+        color: #5033ff;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 2px;
+    }
+
+    .td-organizer-item-link:hover {
+        text-decoration: underline;
+    }
+
+    .td-organizer-pin {
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+
+    .td-organizer-pin.highlight {
+        fill: #5033ff;
+    }
+
+    .td-organizer-pin.highlight circle:first-child {
+        r: 8;
+        fill: #5033ff;
+    }
+
+    .td-organizer-pin.highlight circle:last-child {
+        r: 12;
+        fill: rgba(80, 51, 255, 0.15);
+    }
+
+    .td-map-svg-wrap {
+        position: relative;
+        max-width: 500px;
+        margin: 0 auto;
+        aspect-ratio: 313 / 300;
+    }
+
+    .td-map-svg-wrap svg {
+        display: block;
+    }
+
+    @media (max-width: 991px) {
+        .td-organizers-wrap .row {
+            flex-direction: column-reverse;
+        }
+
+        .td-organizers-title {
+            margin-bottom: 32px;
+        }
+    }
 </style>
 {{/contentFor}}
 
-{{!< default}}
-{{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
-
-{{#post}}
-
-<main class="gh-main">
+{{!< default}} {{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
+    {{#post}} <main class="gh-main">
     <article class="gh-article {{post_class}}">
 
         {{#match @page.show_title_and_feature_image}}
-            <header class="gh-article-header gh-canvas">
-                <h1 class="gh-article-title is-title">{{title}}</h1>
-                {{#if custom_excerpt}}
-                    <p class="gh-article-excerpt is-body">{{custom_excerpt}}</p>
-                {{/if}}
-                {{> "feature-image"}}
-            </header>
+        <header class="gh-article-header gh-canvas">
+            <h1 class="gh-article-title is-title">{{title}}</h1>
+            {{#if custom_excerpt}}
+            <p class="gh-article-excerpt is-body">{{custom_excerpt}}</p>
+            {{/if}}
+            {{> "feature-image"}}
+        </header>
         {{/match}}
 
         <section class="gh-content gh-canvas is-body">
@@ -124,117 +139,135 @@
         </section>
 
         <div class="evente-wrap">
-    <div class="td-organizers-wrap">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="td-map-svg-wrap wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">
-                        <img src="{{asset 'images/france.svg'}}" alt="Carte de France" style="width: 100%; height: auto; display: block; pointer-events: none;">
-                        <svg viewBox="0 0 313 300" style="position: absolute; inset: 0; width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg">
-                            <g class="td-organizer-pin" data-organizer="assofl" style="cursor: pointer;">
-                                <circle cx="177" cy="36" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2"/>
-                                <circle cx="177" cy="36" r="16" fill="transparent"/>
-                            </g>
-                            <g class="td-organizer-pin" data-organizer="kidslab" style="cursor: pointer;">
-                                <circle cx="237" cy="142" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2"/>
-                                <circle cx="237" cy="142" r="16" fill="transparent"/>
-                            </g>
-                            <g class="td-organizer-pin" data-organizer="lelab" style="cursor: pointer;">
-                                <circle cx="106" cy="190" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2"/>
-                                <circle cx="106" cy="190" r="16" fill="transparent"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="td-organizers-list wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.6s">
-                        <div class="td-organizer-item" data-organizer="assofl">
+            <div class="td-organizers-wrap">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="td-map-svg-wrap wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                                <img src="{{asset 'images/france.svg'}}" alt="Carte de France"
+                                    style="width: 100%; height: auto; display: block; pointer-events: none;">
+                                <svg viewBox="0 0 313 300"
+                                    style="position: absolute; inset: 0; width: 100%; height: 100%;"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g class="td-organizer-pin" data-organizer="assofl" style="cursor: pointer;">
+                                        <circle cx="177" cy="36" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
+                                        <circle cx="177" cy="36" r="16" fill="transparent" />
+                                    </g>
+                                    <g class="td-organizer-pin" data-organizer="kidslab" style="cursor: pointer;">
+                                        <circle cx="237" cy="142" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
+                                        <circle cx="237" cy="142" r="16" fill="transparent" />
+                                    </g>
+                                    <g class="td-organizer-pin" data-organizer="lelab" style="cursor: pointer;">
+                                        <circle cx="106" cy="190" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
+                                        <circle cx="106" cy="190" r="16" fill="transparent" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="td-organizers-list wow fadeInRight" data-wow-duration="1.5s"
+                                data-wow-delay="0.6s">
+                                <div class="td-organizer-item" data-organizer="assofl">
+                                    <div class="td-organizer-item-icon">
+                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-10-qrvrd0ns5zllv19qm6in6s86im4cylp0ya83or1wbs.png"
+                                            alt="">
+                                    </div>
+                                    <div class="td-organizer-item-text">
+                                        <h4 class="td-organizer-item-title">ASSO FL'</h4>
+                                        <p class="td-organizer-item-subtitle">Région Nord - Armentières</p>
+                                        <a class="td-organizer-item-link"
+                                            href="https://lycee-gustave-eiffel.fr/asso-fl/" target="_blank">Site
+                                            Internet</a>
+                                    </div>
+                                </div>
+                                <div class="td-organizer-item" data-organizer="kidslab">
+                                    <div class="td-organizer-item-icon">
+                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-3-2-qrvrjt1u4ua3acth0j8zzk27ajji8u9i71e0iwynvs.png"
+                                            alt="">
+                                    </div>
+                                    <div class="td-organizer-item-text">
+                                        <h4 class="td-organizer-item-title">Kidslab</h4>
+                                        <p class="td-organizer-item-subtitle">Région Grand Est - Mulhouse</p>
+                                        <a class="td-organizer-item-link"
+                                            href="https://kidslab.education/evenements-challenges/fll/"
+                                            target="_blank">Site Internet</a>
+                                    </div>
+                                </div>
+                                <div class="td-organizer-item" data-organizer="">
+                                    <div class="td-organizer-item-icon">
+                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-4-1-qrvrjtzobobdlys3v1nmk1tnvxevgjd8j61i06x9pk.png"
+                                            alt="">
+                                    </div>
+                                    <div class="td-organizer-item-text">
+                                        <h4 class="td-organizer-item-title">Notre-Dame-de-Mongré</h4>
+                                        <p class="td-organizer-item-subtitle">Auvergne Rhône Alpes</p>
+                                    </div>
+                                </div>
+                                <div class="td-organizer-item" data-organizer="">
+                                    <div class="td-organizer-item-icon">
+                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-11-1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="td-organizer-item-text">
+                                        <h4 class="td-organizer-item-title">Arcadie</h4>
+                                        <p class="td-organizer-item-subtitle">Saint-Etienne</p>
+                                        <a class="td-organizer-item-link"
+                                            href="https://www.facebook.com/arcadie42/?locale=fr_FR" target="_blank">Site
+                                            Internet</a>
+                                    </div>
+                                </div>
+                                <div class="td-organizer-item" data-organizer="">
+                                <div class="td-organizer-item-icon">
+                                    <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-8-2.png"
+                                        alt="">
+                                </div>
+                                <div class="td-organizer-item-text">
+                                    <h4 class="td-organizer-item-title">Robotinna</h4>
+                                    <p class="td-organizer-item-subtitle">Sud - Hyères</p>
+                                    <a class="td-organizer-item-link" href="https://robotinna.jimdofree.com/"
+                                        target="_blank">Site Internet</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="td-organizer-item" data-organizer="lelab">
                             <div class="td-organizer-item-icon">
-                                <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-10-qrvrd0ns5zllv19qm6in6s86im4cylp0ya83or1wbs.png" alt="">
-                            </div>
-                            <div class="td-organizer-item-text">
-                                <h4 class="td-organizer-item-title">ASSO FL'</h4>
-                                <p class="td-organizer-item-subtitle">Région Nord - Armentières</p>
-                                <a class="td-organizer-item-link" href="https://lycee-gustave-eiffel.fr/asso-fl/" target="_blank">Site Internet</a>
-                            </div>
-                        </div>
-                        <div class="td-organizer-item" data-organizer="kidslab">
-                            <div class="td-organizer-item-icon">
-                                <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-3-2-qrvrjt1u4ua3acth0j8zzk27ajji8u9i71e0iwynvs.png" alt="">
-                            </div>
-                            <div class="td-organizer-item-text">
-                                <h4 class="td-organizer-item-title">Kidslab</h4>
-                                <p class="td-organizer-item-subtitle">Région Grand Est - Mulhouse</p>
-                                <a class="td-organizer-item-link" href="https://kidslab.education/evenements-challenges/fll/" target="_blank">Site Internet</a>
-                            </div>
-                        </div>
-                        <div class="td-organizer-item" data-organizer="">
-                            <div class="td-organizer-item-icon">
-                                <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-4-1-qrvrjtzobobdlys3v1nmk1tnvxevgjd8j61i06x9pk.png" alt="">
-                            </div>
-                            <div class="td-organizer-item-text">
-                                <h4 class="td-organizer-item-title">Notre-Dame-de-Mongré</h4>
-                                <p class="td-organizer-item-subtitle">Auvergne Rhône Alpes</p>
-                            </div>
-                        </div>
-                            <div class="td-organizer-item" data-organizer="">
-                            <div class="td-organizer-item-icon">
-                                <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-11-1.png" alt="">
-                            </div>
-                            <div class="td-organizer-item-text">
-                                <h4 class="td-organizer-item-title">Arcadie</h4>
-                                <p class="td-organizer-item-subtitle">Saint-Etienne</p>
-                                <a class="td-organizer-item-link" href="https://www.facebook.com/arcadie42/?locale=fr_FR" target="_blank">Site Internet</a>
-                            </div>
-                        </div>
-                        </div>
-                            <div class="td-organizer-item" data-organizer="">
-                            <div class="td-organizer-item-icon">
-                                <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-8-2.png" alt="">
-                            </div>
-                            <div class="td-organizer-item-text">
-                                <h4 class="td-organizer-item-title">Robotinna</h4>
-                                <p class="td-organizer-item-subtitle">Sud - Hyères</p>
-                                <a class="td-organizer-item-link" href="https://robotinna.jimdofree.com/" target="_blank">Site Internet</a>
-                            </div>
-                        </div>
-                        </div>
-                            <div class="td-organizer-item" data-organizer="lelab">
-                            <div class="td-organizer-item-icon">
-                                <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-5-1-qrvrjuxhwkyqcvc0o4ywc22y5keizaup855bf8wr1k.png" alt="">
+                                <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-5-1-qrvrjuxhwkyqcvc0o4ywc22y5keizaup855bf8wr1k.png"
+                                    alt="">
                             </div>
                             <div class="td-organizer-item-text">
                                 <h4 class="td-organizer-item-title">Le Lab</h4>
                                 <p class="td-organizer-item-subtitle">Nouvelle Aquitaine - Saint Gervais</p>
-                                <a class="td-organizer-item-link" href="https://lelab.club" target="_blank">Site Internet</a>
+                                <a class="td-organizer-item-link" href="https://lelab.club" target="_blank">Site
+                                    Internet</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+        </div>
+        </div>
 
     </article>
-</main>
+    </main>
 
-{{/post}}
+    {{/post}}
 
-{{#contentFor "scripts"}}
-<script src="{{asset 'js/vendor/jquery.js'}}"></script>
-<script src="{{asset 'js/wow.min.js'}}"></script>
-<script>
-(function ($) {
-    $('.td-organizer-item, .td-organizer-pin').on('mouseenter', function () {
-        var id = $(this).data('organizer');
-        $('.td-organizer-item[data-organizer="' + id + '"]').addClass('highlight');
-        $('.td-organizer-pin[data-organizer="' + id + '"]').addClass('highlight');
-    }).on('mouseleave', function () {
-        var id = $(this).data('organizer');
-        $('.td-organizer-item[data-organizer="' + id + '"]').removeClass('highlight');
-        $('.td-organizer-pin[data-organizer="' + id + '"]').removeClass('highlight');
-    });
-})(jQuery);
-</script>
-{{/contentFor}}
+    {{#contentFor "scripts"}}
+    <script src="{{asset 'js/vendor/jquery.js'}}"></script>
+    <script src="{{asset 'js/wow.min.js'}}"></script>
+    <script>
+        (function ($) {
+            $('.td-organizer-item, .td-organizer-pin').on('mouseenter', function () {
+                var id = $(this).data('organizer');
+                $('.td-organizer-item[data-organizer="' + id + '"]').addClass('highlight');
+                $('.td-organizer-pin[data-organizer="' + id + '"]').addClass('highlight');
+            }).on('mouseleave', function () {
+                var id = $(this).data('organizer');
+                $('.td-organizer-item[data-organizer="' + id + '"]').removeClass('highlight');
+                $('.td-organizer-pin[data-organizer="' + id + '"]').removeClass('highlight');
+            });
+        })(jQuery);
+    </script>
+    {{/contentFor}}
