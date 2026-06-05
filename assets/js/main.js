@@ -35,10 +35,12 @@
     reframe(document.querySelectorAll(sources.join(',')));
 })();
 
-/* Turn the main nav into dropdown menu when there are more than 5 menu items */
-(function () {
-    dropdown();
-})();
+/* Disabled: the dropdown JS collapses nav items into a "More" menu on desktop.
+   We want the full menu visible on all screens above the mobile burger breakpoint.
+   The burger toggle (above) handles mobile navigation. */
+// (function () {
+//     dropdown();
+// })();
 
 /* Infinite scroll pagination */
 (function () {
