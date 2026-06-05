@@ -82,15 +82,13 @@
     fill: rgba(80, 51, 255, 0.15);
 }
 .td-map-svg-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    aspect-ratio: 313 / 300;
 }
 .td-map-svg-wrap svg {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+    display: block;
 }
 @media (max-width: 991px) {
     .td-organizers-wrap .row {
@@ -130,7 +128,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="td-map-svg-wrap wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s" style="position: relative;">
+                    <div class="td-map-svg-wrap wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">
                         <img src="{{asset 'images/france.svg'}}" alt="Carte de France" style="width: 100%; height: auto; display: block; pointer-events: none;">
                         <svg viewBox="0 0 313 300" style="position: absolute; inset: 0; width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg">
                             <g class="td-organizer-pin" data-organizer="paris" style="cursor: pointer;">
