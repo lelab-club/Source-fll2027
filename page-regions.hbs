@@ -108,11 +108,20 @@
         display: block;
     }
 
+    @media (min-width: 992px) {
+        .td-organizers-wrap .row > .td-map-col {
+            flex: 0 0 70%;
+            max-width: 70%;
+        }
+        .td-organizers-wrap .row > .td-list-col {
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
+    }
     @media (max-width: 991px) {
         .td-organizers-wrap .row {
             flex-direction: column-reverse;
         }
-
         .td-organizers-title {
             margin-bottom: 32px;
         }
@@ -142,7 +151,7 @@
             <div class="td-organizers-wrap">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 td-map-col">
                             <div class="td-map-svg-wrap wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">
                                 <img src="{{asset 'images/france.svg'}}" alt="Carte de France"
                                     style="width: 100%; height: auto; display: block; pointer-events: none;">
@@ -164,7 +173,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 td-list-col">
                             <div class="td-organizers-list wow fadeInRight" data-wow-duration="1.5s"
                                 data-wow-delay="0.6s">
                                 <div class="td-organizer-item" data-organizer="assofl">
