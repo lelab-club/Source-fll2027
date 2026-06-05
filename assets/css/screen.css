@@ -557,9 +557,8 @@ body[class*=" gh-font-heading"]:not(.gh-font-heading-fira-sans):not(.gh-font-hea
         display: none;
     }
 
-    .gh-navigation:not(.is-dropdown-loaded) .gh-navigation-menu .nav>li {
-        opacity: 0;
-    }
+    /* Removed: this hid nav items until dropdown.js loaded the "More" menu.
+       We keep the full nav visible on desktop instead. */
 }
 
 /* 6.1. Navigation styles */
