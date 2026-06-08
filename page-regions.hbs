@@ -159,6 +159,11 @@
         fill: rgba(41, 121, 255, 0.15);
     }
 
+    .td-organizers-list {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
     .td-organizers-loading {
         display: flex;
         flex-direction: column;
@@ -340,6 +345,8 @@
                     });
                     $('.td-organizer-item[data-organizer="' + id + '"]').addClass('highlight');
                     $('.td-organizer-pin[data-organizer="' + id + '"]').addClass('highlight');
+                    var $item = $('.td-organizer-item[data-organizer="' + id + '"]').first();
+                    if ($item.length) $item[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }).on('mouseleave', '.td-organizer-item, .td-organizer-pin', function () {
                     $('.td-organizer-item.highlight, .td-organizer-pin.highlight').removeClass('highlight');
                 });
