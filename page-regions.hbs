@@ -120,6 +120,49 @@
         }
     }
 
+    .td-organizers-section-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #888;
+        margin: 24px 0 12px;
+        padding: 0 4px;
+    }
+
+    .td-organizers-section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #e0e0e0;
+    }
+
+    .td-organizers-section-title:first-child {
+        margin-top: 0;
+    }
+
+    .td-organizer-item.national {
+        border-left: 3px solid #2979ff;
+        margin-bottom: 2px;
+    }
+
+    .td-organizer-pin-national circle:first-child {
+        r: 7;
+    }
+
+    .td-organizer-pin-national.highlight circle:first-child {
+        r: 9;
+        fill: #2979ff;
+    }
+
+    .td-organizer-pin-national.highlight circle:last-child {
+        r: 14;
+        fill: rgba(41, 121, 255, 0.15);
+    }
+
     @media (max-width: 991px) {
         .td-organizers-wrap .row {
             flex-direction: column-reverse;
@@ -158,6 +201,10 @@
                                 <svg viewBox="0 0 313 300"
                                     style="position: absolute; inset: 0; width: 100%; height: 100%;"
                                     xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Dashed lines: national organisers → Futuroscope -->
+                                    <line x1="149" y1="108" x2="120" y2="142" stroke="#2979ff" stroke-width="1.5" stroke-dasharray="5,4" />
+                                    <line x1="106" y1="190" x2="120" y2="142" stroke="#2979ff" stroke-width="1.5" stroke-dasharray="5,4" />
+                                    <line x1="83" y1="127" x2="120" y2="142" stroke="#2979ff" stroke-width="1.5" stroke-dasharray="5,4" />
                                     <g class="td-organizer-pin" data-organizer="assofl" style="cursor: pointer;">
                                         <circle cx="177" cy="36" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
                                         <circle cx="177" cy="36" r="16" fill="transparent" />
@@ -166,8 +213,8 @@
                                         <circle cx="237" cy="142" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
                                         <circle cx="237" cy="142" r="16" fill="transparent" />
                                     </g>
-                                    <g class="td-organizer-pin" data-organizer="lelab" style="cursor: pointer;">
-                                        <circle cx="106" cy="190" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
+                                    <g class="td-organizer-pin td-organizer-pin-national" data-organizer="lelab" style="cursor: pointer;">
+                                        <circle cx="106" cy="190" r="7" fill="#2979ff" stroke="#fff" stroke-width="2" />
                                         <circle cx="106" cy="190" r="16" fill="transparent" />
                                     </g>
                                     <g class="td-organizer-pin" data-organizer="arcadie" style="cursor: pointer;">
@@ -182,12 +229,12 @@
                                         <circle cx="231" cy="240" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
                                         <circle cx="231" cy="240" r="16" fill="transparent" />
                                     </g>
-                                    <g class="td-organizer-pin" data-organizer="decanum" style="cursor: pointer;">
-                                        <circle cx="149" cy="108" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
+                                    <g class="td-organizer-pin td-organizer-pin-national" data-organizer="decanum" style="cursor: pointer;">
+                                        <circle cx="149" cy="108" r="7" fill="#2979ff" stroke="#fff" stroke-width="2" />
                                         <circle cx="149" cy="108" r="16" fill="transparent" />
                                     </g>
-                                    <g class="td-organizer-pin" data-organizer="air2" style="cursor: pointer;">
-                                        <circle cx="83" cy="127" r="6" fill="#e74c3c" stroke="#fff" stroke-width="2" />
+                                    <g class="td-organizer-pin td-organizer-pin-national" data-organizer="air2" style="cursor: pointer;">
+                                        <circle cx="83" cy="127" r="7" fill="#2979ff" stroke="#fff" stroke-width="2" />
                                         <circle cx="83" cy="127" r="16" fill="transparent" />
                                     </g>
                                     <g class="td-organizer-pin" data-organizer="meudon" style="cursor: pointer;">
@@ -211,7 +258,47 @@
                         <div class="col-lg-6 td-list-col">
                             <div class="td-organizers-list wow fadeInRight" data-wow-duration="1.5s"
                                 data-wow-delay="0.6s">
-                                {{! sorted by pin Y ascending: assofl(36), educabot(81), meudon(84), decanum(108), air2(127), kidslab(142), mongre(159), arcadie(180), lelab(190), robotinna(240), archipel(260) }}
+                                {{! National team: decanum(108), air2(127), lelab(190) — Local sorted by pin Y }}
+                                <div class="td-organizers-section-title">Organisateurs du Festival 2027</div>
+                                <div class="td-organizer-item national" data-organizer="lelab">
+                                    <div class="td-organizer-item-icon">
+                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-5-1-qrvrjuxhwkyqcvc0o4ywc22y5keizaup855bf8wr1k.png"
+                                            alt="">
+                                    </div>
+                                    <div class="td-organizer-item-text">
+                                        <h4 class="td-organizer-item-title">Le Lab</h4>
+                                        <p class="td-organizer-item-subtitle">Nouvelle Aquitaine - Saint Gervais</p>
+                                        <a class="td-organizer-item-link" href="https://lelab.club" target="_blank">Site
+                                            Internet</a>
+                                    </div>
+                                </div>
+                                <div class="td-organizer-item national" data-organizer="decanum">
+                                    <div class="td-organizer-item-icon">
+                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-1-3.png"
+                                            alt="">
+                                    </div>
+                                    <div class="td-organizer-item-text">
+                                        <h4 class="td-organizer-item-title">Decanum</h4>
+                                        <p class="td-organizer-item-subtitle">Centre Val de Loire - Orléans</p>
+                                        <a class="td-organizer-item-link" href="https://decanum.fr/"
+                                            target="_blank">Site
+                                            Internet</a>
+                                    </div>
+                                </div>
+                                <div class="td-organizer-item national" data-organizer="air2">
+                                    <div class="td-organizer-item-icon">
+                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-6-1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="td-organizer-item-text">
+                                        <h4 class="td-organizer-item-title">Air2</h4>
+                                        <p class="td-organizer-item-subtitle">Loire Atlantique - Nantes</p>
+                                        <a class="td-organizer-item-link" href="https://air2.org/" target="_blank">Site
+                                            Internet</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="td-organizers-section-title">Organisateurs Locaux</div>
                                 <div class="td-organizer-item" data-organizer="assofl">
                                     <div class="td-organizer-item-icon">
                                         <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-10-qrvrd0ns5zllv19qm6in6s86im4cylp0ya83or1wbs.png"
@@ -251,31 +338,6 @@
                                             Internet</a>
                                     </div>
                                 </div>
-                                <div class="td-organizer-item" data-organizer="decanum">
-                                    <div class="td-organizer-item-icon">
-                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-1-3.png"
-                                            alt="">
-                                    </div>
-                                    <div class="td-organizer-item-text">
-                                        <h4 class="td-organizer-item-title">Decanum</h4>
-                                        <p class="td-organizer-item-subtitle">Centre Val de Loire - Orléans</p>
-                                        <a class="td-organizer-item-link" href="https://decanum.fr/"
-                                            target="_blank">Site
-                                            Internet</a>
-                                    </div>
-                                </div>
-                                <div class="td-organizer-item" data-organizer="air2">
-                                    <div class="td-organizer-item-icon">
-                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-6-1.png"
-                                            alt="">
-                                    </div>
-                                    <div class="td-organizer-item-text">
-                                        <h4 class="td-organizer-item-title">Air2</h4>
-                                        <p class="td-organizer-item-subtitle">Loire Atlantique - Nantes</p>
-                                        <a class="td-organizer-item-link" href="https://air2.org/" target="_blank">Site
-                                            Internet</a>
-                                    </div>
-                                </div>
                                 <div class="td-organizer-item" data-organizer="kidslab">
                                     <div class="td-organizer-item-icon">
                                         <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-3-2-qrvrjt1u4ua3acth0j8zzk27ajji8u9i71e0iwynvs.png"
@@ -310,18 +372,6 @@
                                         <p class="td-organizer-item-subtitle">Auvergne-Rhône-Alpes - Saint-Etienne</p>
                                         <a class="td-organizer-item-link"
                                             href="https://www.facebook.com/arcadie42/?locale=fr_FR" target="_blank">Site
-                                            Internet</a>
-                                    </div>
-                                </div>
-                                <div class="td-organizer-item" data-organizer="lelab">
-                                    <div class="td-organizer-item-icon">
-                                        <img src="https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-5-1-qrvrjuxhwkyqcvc0o4ywc22y5keizaup855bf8wr1k.png"
-                                            alt="">
-                                    </div>
-                                    <div class="td-organizer-item-text">
-                                        <h4 class="td-organizer-item-title">Le Lab</h4>
-                                        <p class="td-organizer-item-subtitle">Nouvelle Aquitaine - Saint Gervais</p>
-                                        <a class="td-organizer-item-link" href="https://lelab.club" target="_blank">Site
                                             Internet</a>
                                     </div>
                                 </div>
