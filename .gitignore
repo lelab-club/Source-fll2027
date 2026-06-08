@@ -2,6 +2,7 @@ b-cov
 *.seed
 *.log
 *.csv
+!assets/data/organizers.csv
 *.dat
 *.out
 *.pid
