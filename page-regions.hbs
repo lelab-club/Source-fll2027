@@ -363,7 +363,8 @@
                 });
 
                 var national = primaryRows.filter(function (row) { return row.type === 'national'; });
-                var local = primaryRows.filter(function (row) { return row.type !== 'national'; });
+                var local = primaryRows.filter(function (row) { return row.type !== 'national'; })
+                    .sort(function (a, b) { return (+a.cy || 9999) - (+b.cy || 9999); });
 
                 // Dashed lines from national primary rows only
                 var linesHtml = '';
