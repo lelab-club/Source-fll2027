@@ -425,9 +425,15 @@
                     list.style.webkitMaskImage = 'none';
                     return;
                 }
-                var topFade = st > 2 ? 'transparent 0, #000 20px, ' : '';
-                var botFade = sh - ch - st > 2 ? ', #000 calc(100% - 20px), transparent 100%' : '';
-                var mask = 'linear-gradient(to bottom, ' + topFade + '#000 0, #000 100%' + botFade + ')';
+                var atTop = st <= 2, atBottom = sh - ch - st <= 2;
+                var mask;
+                if (atTop) {
+                    mask = 'linear-gradient(to bottom, #000 0, #000 calc(100% - 20px), transparent 100%)';
+                } else if (atBottom) {
+                    mask = 'linear-gradient(to bottom, transparent 0, #000 20px, #000 100%)';
+                } else {
+                    mask = 'linear-gradient(to bottom, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%)';
+                }
                 list.style.maskImage = mask;
                 list.style.webkitMaskImage = mask;
             }
