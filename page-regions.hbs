@@ -118,8 +118,24 @@
         .td-organizers-list {
             max-height: 70vh;
             overflow-y: auto;
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
-            mask-image: linear-gradient(to bottom, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+            scrollbar-width: thin;
+        }
+
+        .td-organizers-list::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .td-organizers-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .td-organizers-list::-webkit-scrollbar-thumb {
+            background: transparent;
+            border-radius: 3px;
+        }
+
+        .td-organizers-list:hover::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.15);
         }
     }
 
@@ -395,7 +411,19 @@
                 $('#organizers-loading').hide();
 
                 bindHighlights();
+                updateListMask();
+                $(window).on('resize', updateListMask);
             });
+
+            function updateListMask() {
+                var list = $('.td-organizers-list')[0];
+                if (!list) return;
+                var mask = list.scrollHeight > list.clientHeight
+                    ? 'linear-gradient(to bottom, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%)'
+                    : 'none';
+                list.style.maskImage = mask;
+                list.style.webkitMaskImage = mask;
+            }
         })(jQuery);
     </script>
     {{/contentFor}}
