@@ -333,6 +333,7 @@
             function bindHighlights() {
                 $(document).on('mouseenter', '.td-organizer-item, .td-organizer-pin', function () {
                     var id = $(this).data('organizer');
+                    $('.td-organizer-item.highlight, .td-organizer-pin.highlight').removeClass('highlight');
                     $('.td-organizer-pin[data-organizer="' + id + '"]').each(function () {
                         var parent = this.parentNode;
                         if (parent) parent.appendChild(this);
@@ -340,9 +341,7 @@
                     $('.td-organizer-item[data-organizer="' + id + '"]').addClass('highlight');
                     $('.td-organizer-pin[data-organizer="' + id + '"]').addClass('highlight');
                 }).on('mouseleave', '.td-organizer-item, .td-organizer-pin', function () {
-                    var id = $(this).data('organizer');
-                    $('.td-organizer-item[data-organizer="' + id + '"]').removeClass('highlight');
-                    $('.td-organizer-pin[data-organizer="' + id + '"]').removeClass('highlight');
+                    $('.td-organizer-item.highlight, .td-organizer-pin.highlight').removeClass('highlight');
                 });
             }
 
