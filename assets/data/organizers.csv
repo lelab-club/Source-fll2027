@@ -1,15 +1,15 @@
 id,image,name,location,website,type,cx,cy
-assofl,https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-10-qrvrd0ns5zllv19qm6in6s86im4cylp0ya83or1wbs.png,ASSO FL',Hauts-de-France - Armentières,https://lycee-gustave-eiffel.fr/asso-fl/,local,177,36
-educabot,https://firstlegoleaguefrance.fr/wp-content/uploads/2023/08/educabot.png,Educabot,"Ile-de-France, Clichy-sous-Bois",https://educabot.fr/,local,165,81
+lelab,https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-5-1-qrvrjuxhwkyqcvc0o4ywc22y5keizaup855bf8wr1k.png,Le Lab,"Nouvelle Aquitaine, Saint Gervais",https://lelab.club/,national,106,190
+decanum,https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-1-3.png,Decanum,"Centre Val de Loire, Orleans",https://decanum.fr/,national,149,108
+air2,https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-6-1.png,Air2,"Loire Atlantique, Nantes",https://air2.org/,national,83,127
+assofl,https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-10-qrvrd0ns5zllv19qm6in6s86im4cylp0ya83or1wbs.png,ASSO FL',"Hauts-de-France, Armentières",https://lycee-gustave-eiffel.fr/asso-fl/,local,177,36
+educabot,https://firstlegoleaguefrance.fr/wp-content/uploads/2023/08/educabot.png,Educabot,"Ile-de-France, Clichy-sous-Bois<br>Bourgogne-Franche-Comté - Chalon-sur-Saône",https://educabot.fr/,local,165,81
 educabot,,,,,local,209,136
 meudon,https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-12-qrvrd2jgjno6i970b7bwbrr3pdv3dzwhmjj2naz3zc.png,"Espaces Numeriques, ville de Meudon","Ile-de-France, Meudon",https://numerique.meudon.fr/accueil/,local,155,84
-decanum,https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-1-3.png,Decanum,Centre Val de Loire - Orleans,https://decanum.fr/,national,149,108
-air2,https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-6-1.png,Air2,Loire Atlantique - Nantes,https://air2.org/,national,83,127
-kidslab,https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-3-2-qrvrjt1u4ua3acth0j8zzk27ajji8u9i71e0iwynvs.png,Kidslab,Grand Est - Mulhouse,https://kidslab.education/evenements-challenges/fll/,local,237,142
-arcadie,https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-11-1.png,Arcadie,Auvergne-Rhone-Alpes - Saint-Etienne,https://www.facebook.com/arcadie42/?locale=fr_FR,local,200,180
-lelab,https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-5-1-qrvrjuxhwkyqcvc0o4ywc22y5keizaup855bf8wr1k.png,Le Lab,Nouvelle Aquitaine - Saint Gervais,https://lelab.club/,national,106,190
-robotinna,https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-8-2.png,Robotinna,Provence-Alpes-Cote d'Azur - Hyeres,https://robotinna.jimdofree.com/,local,231,240
-archipel,https://firstlegoleaguefrance.fr/wp-content/uploads/2025/03/logo.webp,Archipel des Sciences,Guadeloupe,,local,20,260
-petitsdebrouillards,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcAdY4868ZtLWiCDQkHkPQ7HcTngxrXK3dww&s,Les Petits Debrouillards,Hauts-de-France - Luneville,https://www.lespetitsdebrouillards.org/,local,,
-zefabtruck,https://zefabtruck.fr/wp-content/uploads/2018/02/ZEFABTRUCK_logo.png,Ze Fab Truck,"Ile-de-France, Pierrelaye",https://zefabtruck.fr/,local,,
-villetaneuse,https://www.mairie-villetaneuse.fr/template/villetaneuse-2018/img/logo-villetaneuse-2024.png,"Maison Commune Espace Numerique, Villetaneuse","Ile-de-France, Villetaneuse",https://www.mairie-villetaneuse.fr/annuaire/maison-commune-espace_numerique-mcen,local,,
+kidslab,https://firstlegoleaguefrance.fr/wp-content/uploads/elementor/thumbs/Plan-de-travail-3-2-qrvrjt1u4ua3acth0j8zzk27ajji8u9i71e0iwynvs.png,Kidslab,"Grand Est, Mulhouse",https://kidslab.education/evenements-challenges/fll/,local,237,142
+arcadie,https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-11-1.png,Arcadie,"Auvergne-Rhone-Alpes, Saint-Etienne",https://www.facebook.com/arcadie42/?locale=fr_FR,local,200,180
+robotinna,https://firstlegoleaguefrance.fr/wp-content/uploads/2024/07/Plan-de-travail-8-2.png,Robotinna,"Provence-Alpes-Cote d'Azur, Hyeres",https://robotinna.jimdofree.com/,local,231,240
+archipel,https://firstlegoleaguefrance.fr/wp-content/uploads/2025/03/logo.webp,Archipel des Sciences,"Guadeloupe, Lamentin",,local,20,260
+petitsdebrouillards,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcAdY4868ZtLWiCDQkHkPQ7HcTngxrXK3dww&s,Les Petits Debrouillards,"Grand Est, Luneville",https://www.lespetitsdebrouillards.org/,local,236,88
+zefabtruck,https://zefabtruck.fr/wp-content/uploads/2018/02/ZEFABTRUCK_logo.png,Ze Fab Truck,"Ile-de-France, Pierrelaye",https://zefabtruck.fr/,local,157,77
+villetaneuse,https://www.mairie-villetaneuse.fr/template/villetaneuse-2018/img/logo-villetaneuse-2024.png,"Maison Commune Espace Numerique, Villetaneuse","Ile-de-France, Villetaneuse",https://www.mairie-villetaneuse.fr/annuaire/maison-commune-espace_numerique-mcen,local,157,80
