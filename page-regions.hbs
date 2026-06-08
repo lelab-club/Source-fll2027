@@ -190,6 +190,14 @@
         }
     }
 
+    .td-organizers-dimming .td-organizer-item:not(.highlight) {
+        opacity: 0.25;
+    }
+
+    .td-organizers-dimming .td-organizer-pin:not(.highlight) {
+        opacity: 0.2;
+    }
+
     @media (max-width: 991px) {
         .td-organizers-wrap .row {
             flex-direction: column-reverse;
@@ -335,6 +343,7 @@
             }
 
             function bindHighlights() {
+                var $wrap = $('.td-organizers-wrap');
                 $(document).on('mouseenter', '.td-organizer-item, .td-organizer-pin', function () {
                     var id = $(this).data('organizer');
                     $('.td-organizer-pin[data-organizer="' + id + '"]').each(function () {
@@ -343,10 +352,12 @@
                     });
                     $('.td-organizer-item[data-organizer="' + id + '"]').addClass('highlight');
                     $('.td-organizer-pin[data-organizer="' + id + '"]').addClass('highlight');
+                    $wrap.addClass('td-organizers-dimming');
                 }).on('mouseleave', '.td-organizer-item, .td-organizer-pin', function () {
                     var id = $(this).data('organizer');
                     $('.td-organizer-item[data-organizer="' + id + '"]').removeClass('highlight');
                     $('.td-organizer-pin[data-organizer="' + id + '"]').removeClass('highlight');
+                    $wrap.removeClass('td-organizers-dimming');
                 });
             }
 
