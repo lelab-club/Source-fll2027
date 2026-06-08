@@ -55,3 +55,18 @@ no linter, no formatter, no typecheck.
 - **ES5 + jQuery** — all custom JS uses `(function($) { ... })(jQuery)`
 - **Ghost membership** partially implemented (sign-in, subscribe forms);
   footer signup currently disabled in `home.hbs`
+
+## Workflow
+
+- After completing a build action, ask the user if they want to commit and push.
+
+## Git conventions
+
+- Commit messages: `<scope>: <short description>` (e.g. `hero: fix z-index layering`)
+- Before committing, check `git status`, `git diff`, and `git log --oneline -3`
+- Stage only intended files; never commit secrets or API keys
+- Keep commits focused on a single logical change — one commit per feature
+- Verify all related assets (images, fonts, etc.) are staged alongside the code change
+- Do not amend pushed commits, force-push, or skip hooks
+- If a commit is rejected by hooks, fix the issue and create a new commit
+- Push to `origin/main`; CI auto-deploys via GitHub Actions
