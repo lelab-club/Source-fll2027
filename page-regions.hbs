@@ -114,6 +114,13 @@
             flex: 0 0 30%;
             max-width: 30%;
         }
+
+        .td-organizers-list {
+            max-height: 70vh;
+            overflow-y: auto;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+        }
     }
 
     .td-organizers-section-title {
@@ -157,11 +164,6 @@
     .td-organizer-pin-national.highlight circle:last-child {
         r: 12;
         fill: rgba(41, 121, 255, 0.15);
-    }
-
-    .td-organizers-list {
-        max-height: 70vh;
-        overflow-y: auto;
     }
 
     .td-organizers-loading {
