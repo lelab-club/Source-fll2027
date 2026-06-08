@@ -4251,7 +4251,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .evente-wrap .td-hero-subtitle {
   font-weight: 800;
-  font-size: 24px;
+  font-size: 28px;
   text-transform: uppercase;
   color: var(--td-common-white);
   display: inline-block;
