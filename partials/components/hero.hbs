@@ -24,6 +24,13 @@
     width: 100%;
     height: 135%;
 }
+.td-hero-logo {
+    display: block;
+    max-width: 360px;
+    width: 70%;
+    height: auto;
+    margin: 0 auto 8px;
+}
 @media (max-width: 767px) {
   .td-hero-area {
     aspect-ratio: 1 / 1 !important;
@@ -31,6 +38,10 @@
   .td-hero-video-wrap iframe {
     width: 177.78%;
     height: 100%;
+  }
+  .td-hero-logo {
+    width: 80%;
+    max-width: 240px;
   }
 }
 </style>
@@ -58,7 +69,7 @@
                         <span class="td-hero-subtitle mb-30 wow td-animetion-left" data-wow-duration="1.5s"
                             data-wow-delay="0.1s">26 - 28 Mars 2027</span>
                         <h2 class="td-hero-title wow td-animetion-left" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                            <i>FIRST®</i> LEGO® League<br />Festival National</h2>
+                            <img class="td-hero-logo" src="{{asset 'images/FIRSTLego_iconHorz_RGB_reverse.png'}}" alt="FIRST LEGO League" /><br />Festival National</h2>
                         <p class="td-hero-location wow mb-35 td-animetion-left" data-wow-duration="1.5s"
                             data-wow-delay="0.5s">Palais des Congrès du Futuroscope, Poitiers, France</p>
                         <div class="td-hero-countdown mb-40 wow td-animetion-right" data-wow-duration="1.5s"
