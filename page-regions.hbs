@@ -412,15 +412,22 @@
 
                 bindHighlights();
                 updateListMask();
+                $('.td-organizers-list').on('scroll', updateListMask);
                 $(window).on('resize', updateListMask);
             });
 
             function updateListMask() {
                 var list = $('.td-organizers-list')[0];
                 if (!list) return;
-                var mask = list.scrollHeight > list.clientHeight
-                    ? 'linear-gradient(to bottom, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%)'
-                    : 'none';
+                var sh = list.scrollHeight, ch = list.clientHeight, st = list.scrollTop;
+                if (sh <= ch) {
+                    list.style.maskImage = 'none';
+                    list.style.webkitMaskImage = 'none';
+                    return;
+                }
+                var topFade = st > 2 ? 'transparent 0, #000 20px, ' : '';
+                var botFade = sh - ch - st > 2 ? ', #000 calc(100% - 20px), transparent 100%' : '';
+                var mask = 'linear-gradient(to bottom, ' + topFade + '#000 0, #000 100%' + botFade + ')';
                 list.style.maskImage = mask;
                 list.style.webkitMaskImage = mask;
             }
